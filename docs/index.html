@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name ="viewport"content="width=device-width, initial-scale=1">
+	<title>Portfolio</title>
+	<link rel="shortcut icon" type="image/ico" href="images&icons/icon.ico">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+	<link id="theme" rel="stylesheet" href="light-theme.css">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+
+	<link rel="stylesheet" type="text/css" href="loader.css">
+
+	<style type="text/css">
+	
+	
+	</style>
+	<script>
+		
+		//adding preloader css animation
+		var count=0;
+	      var counter = setInterval(() => {
+	        if (count < 101) {
+	          $('.count').text(count + '%');
+	          $('.loader').css('width',count + '%');
+	          count ++
+	        }else{
+	          clearInterval(counter)
+	        }
+	      });
+
+//for nightmode/lightmode switching....
+
+document.addEventListener('DOMContentLoaded', () => {
+
+const themeStylesheet = document.getElementById('theme');
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+	// if it's light -> go dark
+	if(themeStylesheet.href.includes('Dark')){
+		themeStylesheet.href = 'dark-theme.css';
+		themeToggle.innerText = 'Light';
+	} else {
+		// if it's dark -> go light
+		themeStylesheet.href = 'light-theme.css';
+		themeToggle.innerText = 'Dark';
+	}
+})
+
+//Get the button
+var mybutton = document.getElementById("scrolltotop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+mybutton.style.display = "block";
+} else {
+mybutton.style.display = "none";
+}
+}
+
+// When the user clicks on the button, scroll to the top of the document
+		$('#scrolltotop').on('click', ()=>{
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+		})
+
+
+
+})	
+document.addEventListener('DOMContentLoaded', () => {
+
+	//for nav links for mobile....
+	const linefornav = document.getElementById("linefornav");
+	const navlinks = document.getElementById("nav-links");
+	const links = document.getElementById("nav-links li");
+	const line1 = document.getElementById("line1");
+
+	linefornav.addEventListener('click', () => {
+		navlinks.classList.toggle("open");
+		linefornav.classList.toggle("cross");
+		
+	});
+
+	$('#nav-links li a').on('click' , ()=>{
+		$('#nav-links').toggleClass("open");
+		$(".linefornav").toggleClass("cross");
+	});
+
+
+});
+
+
+//adding animation effect to the page
+		$(document).ready(function(){
+    		$('.heading-part1').waypoint(function(direction){
+     			 $('.heading-part1').addClass('animate__fadeInDown')
+    		},{offset:'100%'})
+		});
+		$(document).ready(function(){
+    		$('.heading-part2').waypoint(function(direction){
+     			 $('.heading-part2').addClass('animate__fadeInUp')
+    		},{offset:'100%'})
+		});
+		$(document).ready(function(){
+    		$('.knowmore').waypoint(function(direction){
+     			 $('.knowmore').addClass('animate__fadeIn')
+    		},{offset:'100%'})
+		});
+		$(document).ready(function(){
+    		$('.about-part1').waypoint((direction)=>{
+     			 $('.about-part1').addClass('animate__fadeInRightBig')
+    		},{offset:'50%'})
+		});
+		  
+		$(document).ready(function(){
+    		$('.about-part2').waypoint(function(direction){
+     			 $('.about-part2').addClass('animate__fadeInLeftBig')
+    		},{offset:'50%'})
+		});
+		$(document).ready(function(){
+    		$('.tl-part1').waypoint(function(direction){
+     			 $('.tl-part1').addClass('animate__fadeInLeft')
+    		},{offset:'50%'})
+		});
+		$(document).ready(function(){
+    		$('.tl-partp').waypoint(function(direction){
+     			 $('.tl-partp').addClass('animate__fadeInUp')
+    		},{offset:'50%'})
+		});
+		$(document).ready(function(){
+    		$('.tl-part2').waypoint(function(direction){
+     			 $('.tl-part2').addClass('animate__fadeInRight')
+    		},{offset:'50%'})
+		});
+		$(document).ready(function(){
+    		$('.skills-part1').waypoint(function(direction){
+     			 $('.skills-part1').addClass('animate__fadeInUp')
+    		},{offset:'50%'})
+		});
+		$(document).ready(function(){
+    		$('.skills-part2').waypoint(function(direction){
+     			 $('.skills-part2').addClass('animate__fadeInUp')
+    		},{offset:'50%'})
+		});
+		$(document).ready(function(){
+    		$('.fw-part1').waypoint(function(direction){
+     			 $('.fw-part1').addClass('animate__fadeInUp')
+    		},{offset:'50%'})
+		});
+		$(document).ready(function(){
+    		$('.fw-part2').waypoint(function(direction){
+     			 $('.fw-part2').addClass('animate__fadeInUp')
+    		},{offset:'50%'})
+		});
+		$(document).ready(function(){
+    		$('.port-part1').waypoint(function(direction){
+     			 $('.port-part1').addClass('animate__fadeInUp')
+    		},{offset:'50%'})
+		});
+		$(document).ready(function(){
+    		$('.port-part2').waypoint(function(direction){
+     			 $('.port-part2').addClass('animate__fadeInUp')
+    		},{offset:'50%'})
+		});
+		$(document).ready(function(){
+    		$('.cont-part1').waypoint(function(direction){
+     			 $('.cont-part1').addClass('animate__fadeInLeftBig')
+    		},{offset:'60%'})
+		});
+		$(document).ready(function(){
+    		$('.cont-part2').waypoint(function(direction){
+     			 $('.cont-part2').addClass('animate__fadeInRightBig')
+    		},{offset:'60%'})
+		});
+		$(document).ready(function(){
+    		$('.cv-part1').waypoint(function(direction){
+     			 $('.cv-part1').addClass('animate__fadeInDown')
+    		},{offset:'50%'})
+		});
+		$(document).ready(function(){
+    		$('.sm-part1').waypoint(function(direction){
+     			 $('.sm-part1').addClass('animate__bounceIn')
+    		},{offset:'80%'})
+		});
+		$(document).ready(function(){
+    		$('.sm-part2').waypoint(function(direction){
+     			 $('.sm-part2').addClass('animate__fadeInUp')
+    		},{offset:'90%'})
+		});
+
+
+
+	</script>
+	
+	<style>
+		
+		
+	</style>
+</head>
+<body id="top">
+<!-- ********HEADER***************-->
+	
+	<div class="wrapper">
+	    <section>
+	      <div class="loader"></div>
+	      <div class="count"></div>
+	    </section>
+	</div>
+	
+  	
+
+	<nav>
+		<div class="linefornav" id="linefornav">
+		
+
+			<span></span>
+			<span></span>
+			<span></span>
+
+		</div>
+
+		<ul class="nav-links" id="nav-links">
+			<li><p>Mode : <button id="theme-toggle">Dark</button></p></li>
+	        <li><h2><a id="logoicon" href="#top"><img style="width: 60px;height: 60px;" src="images&icons/icon.ico" alt="Vishva Shah Logo"></a></h2></li>
+	        
+			<li><a href="#top"> Home</a></li>
+			<li><a href="#about"> About Me</a></li>
+			<li><a href="#Skills"> Skills</a></li>
+			<li><a href="#portfolio"> Work Experience</a></li>
+			<li><a href="#portfolio"> Portfolio</a></li>
+			<li><a href="#portfolio"> Blogs</a></li>
+			<li><a href="#contact"> Connect with Me</a></li>
+		
+		</ul>
+
+	</nav>
+
+<!--</div>-->
+
+
+<!-- ********HOMEPAGE***************-->
+	<div id="hero">
+		<div class="background-image"></div>
+		<h1 class="heading-part1 animate__animated">Hello, Welcome to my Website. I'm a Machine Learning Expert</h1>
+		<h3 class="heading-part2 animate__animated">I love numbers and playing with data-sets. Let me walk you through my life's data.</h3>
+		<a href="#about" style="font-family: 'Josefin Sans', sans-serif;" class="btn knowmore animate__animated ">Know More</a>
+		
+		<p id="scrolltotop" title="Go to top">Scroll to Top</p>		
+		
+
+	</div>
+	<!-- ********About***************-->
+	<div id="about" class="about">
+		<h3 class="title">About Me</h3>
+		<div id="two-cols">
+		<div class="about-image about-part1 animate__animated"><img style="border-radius: 50%;" src="images&icons/VS.jpg" alt="Vishva Shah image"></div>
+		<div class="about-bio about-part2 animate__animated">
+			<p>
+				I am Vishva Shah, pursuing Master of Science in Business Analytics (Major - </b>Data Science</b>) from University of Illinois at Chicago. I have a bachelor and master’s in commerce and economics. I also posses a professional degree in actuarial science with 9 papers cleared. This being said, I can look at the big picture as well as get my hands dirty diving deep into modelling and analysis. I have hands-on knowledge in building </b>deep learning</b> models on large volumes of data in python as well as R and efficiently extract meaningful insights. I also appreciate visualizations of my findings using tableau as an interactive dashboard which helps me identify issues and highlight the necessary practical actions. I have excellent communication skills and am not afraid of the audience. I am multilingual, I speak over 5 languages. I am an advanced level painter and have been a volunteer in National service scheme for over 2 years. I love learning new things,  currently learning to play guitar. 
+.
+			</p>
+		</div>
+				<p>&nbsp;</p>
+	</div><hr>
+	</div>
+	<!------*******Educational Timeline********---------->
+	<p class="tl-partp animate__animated" style="text-align: center; font-size: 20px;font-family: 'Josefin Sans', sans-serif;">Education Timeline</p><hr>
+	<div class="timeline">
+	  <div class="container left tl-part1 animate__animated">
+	    <div class="content">
+	      <h2>2019 - 2021</h2>
+	      <h3>MS in Business Analytics - Major: Data Science</h3>
+	      <p><b>GPA : 3.87</b><br>University of Illinois at Chicago.</p>
+	    </div>
+	  </div>
+	  <div class="container right tl-part2 animate__animated">
+	    <div class="content">
+	      <h2>2014 - 2018</h2>
+	      <h3>Actuarial Science</h3>
+	      <p><b>9 Papers cleared</b><br>Institute and Faculty of Actuaries (UK).</p>
+	    </div>
+	  </div>
+	  <div class="container left tl-part1 animate__animated">
+	    <div class="content">
+	      <h2>2013 - 2019</h2>
+	      <h3>Master's and Bachelor in Commerce and Economics</h3>
+	      <p><b></b><br>University of Mumbai.</p>
+	    </div>
+	  </div>
+	</div><hr>
+	<!-- ********Skills**************-->
+		<div id="Skills" class="Skills">
+			<h3 class="title">Skills</h3>
+				<p class="skills-part1 animate__animated" style="margin-bottom: 40px;">
+				
+				Solid knowlegde of statistics and mathematics. I have hands-on expeience in building supervised and unsupervised machine learning models. I am meticulous in building models wherein I first augment the data, build the model architecture, tune hyper-paramters and then evaluate the model using measures like F1 score or confusion metrics, amongst others. 
+			</p><hr>
+			<ul class="grid skills-part2 animate__animated">
+				<li><i></i><h4 class="textskill">Supervised Models</h4><p>Experience in building Regression, LDA, Naive Bayes, Decision trees SVM, KNN models</p></li>
+				<li><i></i><h4 class="textskill">Feature-Engeneering</h4><p>Conducted using PCA, SVD, variable importance from random forest, L1 and L2 norms </p></li>
+				<li><i></i><h4 class="textskill">Deep Learning</h4><p>Custom built neural network models using CNN for image-recognition and RNN/LSTM for captioning</p></li>
+			</ul>
+		</div><hr>
+	<!--Frameworks worked with-->
+		<div class="framework">
+			<p style=" font-family: 'Josefin Sans', sans-serif;" class="fw-part1 animate__animated">Some technologies I have experience working with :</p><hr>
+			<div class="fwimg fw-part2 animate__animated">
+				<img class="fwf" src="framework png's/python.png" alt="python">
+				<img class="fwf" src="framework png's/R.png" alt="R">
+				<img class="fwf" src="framework png's/OL.png" alt="Overleaf">
+				<img class="fwf" src="framework png's/Latex.png" alt="Latex">
+				<img class="fwf" src="framework png's/office.png" alt="Microsoft Office">
+				<img class="fwf" src="framework png's/vs.png" alt="Visual Studio">
+				<img class="fwf" src="framework png's/git.png" alt="github">
+				
+			</div>	
+		</div><hr>
+			<!------*******Work ex Timeline********---------->
+	<p class="tl-partp animate__animated" style="text-align: center; font-size: 20px;font-family: 'Josefin Sans', sans-serif;">Work Experience</p><hr>
+	<div class="timeline">
+	  <div class="container left tl-part1 animate__animated">
+	    <div class="content">
+	      <h2>Summer 2020</h2>
+	      <h3>University of Illinois at Chicago</h3>
+	      <p><b>Research Assistant</b><br> - Parallelized extraction using map-reduce algorithm and anomaly detection using RNN and speed up the process by ~65%
+				- Conducted data pre-processing using Spacy, NLTK for tokenization, chunking, POS tags and removal of stopwords
+				- Designed a bi-directional LSTM to experiment with dataset and evaluated using F1-score which resulted in ~50% better accuracy than previously designed models</p>
+	    </div>
+	  </div>
+	  <div class="container right tl-part2 animate__animated">
+	    <div class="content">
+	      <h2>Jan 2018 - July 2018</h2>
+	      <h3>ICICI Prudential Life Insurance Company Ltd.</h3>
+	      <p><b>Actuarial Data Analyst – Manager II</b><br>- Utilized data mining techniques to develop forecasting models after EDA and statistical tests resulting
+				in ~85% accuracy thereby enhancing sales
+				- Optimized the visual data with creation of real-time dashboards that enhanced and automated overall sales team performance
+				- Led the team for the annual risk note including statistical results and info graphics like histograms, heat-map</p>
+	    </div>
+	  </div>
+	  <div class="container left tl-part1 animate__animated">
+	    <div class="content">
+	      <h2>Nov 2016 - Jan 2018</h2>
+	      <h3>Reliance Nippon Life Insurance Company Ltd.</h3>
+	      <p><b>Actuarial Data Analytics Consultant</b><br>- Rendered assistance in business development projects by developing mathematical models for forecasting - Improvised on a healthcare product pricing model after feature extraction resulting in an increase of ~35% compared to the previous model
+		  - Automated the procedure of extracting the results using VBA and speed up the process by ~50%</p>
+	    </div>
+	  </div>
+	</div><hr>
+	
+	<!-- *********Portfolio**************-->
+	<div id="portfolio" class="portfolio">
+		<h3 class="title">Portfolio</h3>
+		<p class="port-part1 animate__animated">
+			Take a look at my academic projects.
+		</p>
+		<hr>
+		<ul  style="justify-content: center;" class="grid port-part2 animate__animated">
+			<li class="large" style="background-image: url('images&icons/about.jpg');"><p id="po">Image Classification<br>Recognizing facial expressions using Pytorch</p><p id="lo">Image Classification<br>Created an image classifying model using Pytorch, Scikit-Learn, NumPy, SciPy, Pandas, Pickle, NLTK, OpenCV.
+			</p><a href="https://github.com/Vishva-Shahh/Image-recognition-using-FER2013/blob/master/IDS576_fer_2013.ipynb" class="btn" id="btnopen">Open</a></li>
+
+			<li class="large" style="background-image: url('images&icons/bgr.jpg');"><p id="po">Manipal Hospital Harvard business review Case study<br>Determining NPS score</p><p id="lo">Case Study<br>Developed supervised models for NPS score using ggplot2, rpart, randomforest, GBM, ROCR, Caret</p><a id="btnopen" href="https://github.com/Vishva-Shahh/-Manipal-Hospital-Harvard-business-review-Case-study" class="btn">Open</a></li>
+
+		</ul>
+	</div>
+	<hr>
+
+	<!-- *********Blogs**************-->
+
+	<div id="portfolio" class="portfolio">
+		<h3 class="title">Statistics Blogs</h3>
+		<p class="port-part1 animate__animated">
+			You will be amazed by how simply I have explained complicated statistical topics in my blogs.
+		</p>
+		<hr>
+		<ul  style="justify-content: center;" class="grid port-part2 animate__animated">
+			<li class="large" style="background-image: url('images&icons/Data Science.png');"><p id="po">Journey towards data science<br>From Commerce to Actuarial Sceince to Data Science</p><p id="lo">A Journey towards Data Science<br>A glance at my long journey towards where I am.
+			</p><a href="https://medium.com/@Vishva_Shah/a-journey-towards-data-science-e46a65f785" class="btn" id="btnopen">Open</a></li>
+
+			<li class="large" style="background-image: url('images&icons/overall.jpg');"><p id="po">Statistical Concepts<br>Numerical measures</p><p id="lo">Chapter 1 Statistics<br>Learn how to calculate the numerical measures with the help of this blog</p><a id="btnopen" href="https://medium.com/@Vishva_Shah/statistics-chapter-1-numerical-measures-f0abca02872a" class="btn">Open</a></li>
+
+		</ul>
+	</div>
+	<hr>
+
+		<!-- *********FOOTER**************-->
+	<div class="cv-part1 animate__animated" style="text-align: center;">
+		<a href="Resume_Vishva_shah.pdf" download="Vishva_Shah-CV" target="_blank" class="btn cv-part1 animate__animated" style="font-family: 'Josefin Sans', sans-serif;" id="cv">Resume - Download</a>
+	</div>
+	
+	<hr>
+	
+
+	<!-- *********CONTACT**************-->
+	<div><h3 class="title">Connect with me</h3></div><hr>
+	<div id="contact">
+			<ul class="grid">
+				<li style="font-family: 'Josefin Sans', sans-serif;" class="cont-part1 animate__animated"><i style="font-size: 30px;color:  #2196f3;" class="fa fa-location-arrow" aria-hidden="true"></i><br><br><p>Chicago, Illinois<br>
+				USA</p></li>
+				<li class="cont-part2 animate__animated"><i style="font-size: 30px;color:  #2196f3;" class="fa fa-envelope-open"></i><br><br><p style="font-family: 'Josefin Sans', sans-serif;">vshah69@uic.edu</p></li>
+				
+			</ul>
+	</div><hr>
+	
+	<footer id="social-media">
+		<ul class="sm-part1 animate__animated">
+			<li><a href="https://twitter.com/vishva_shahh" target="_blank"><i class="fab fa-twitter"></i></a></li>
+			<li><a href="https://www.instagram.com/missvishy/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/vishva-shah-0201/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+			<li><a href="https://github.com/Vishva-Shahh" target="_blank"><i class="fab fa-github"></i></a></li>
+			<li><a href="https://medium.com/@Vishva_Shah" target="_blank"><i class="fab fa-medium"></i></a></li>
+			<li><a href="mailto:vshah69@uic?subject=Hello, I'm ...&body=I have a job for you...." target="_blank"><i class="far fa-envelope"></i></a></li>
+		</ul>
+	</footer>
+
+
+
+
+	<!-- *********FOOTER**************-->
+	<footer id="social-media">
+		<p class="sm-part2 animate__animated">Thank you for visiting !</p>
+		<p class="sm-part2 animate__animated">&ldquo; Believe In Yourself &rdquo;</p>
+		<p class="sm-part2 animate__animated">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Made with <span style="color: red"class="heart">❤</span> by Vishva Shah </p>	
+	</footer>
+
+
+</body>
+</html>
