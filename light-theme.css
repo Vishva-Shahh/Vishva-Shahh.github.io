@@ -682,7 +682,7 @@ body {background: #120a01;font-family: 'Josefin Sans', sans-serif;}
 /*******Portfolio******/
 
 #portfolio{
-		/*background-color: #fff;*/
+		/*background-color: white;*/
 		font-family: 'Josefin Sans', sans-serif;
 	}
 	#portfolio .grid li{
@@ -728,7 +728,7 @@ body {background: #120a01;font-family: 'Josefin Sans', sans-serif;}
 		transition: 0.5s ease-in-out;
 	}
 	#portfolio .grid li.large #po{
-		color: black;
+		color: white;
 		padding-top: 20px;
 	}
 	#portfolio .grid li.large:hover #po{
@@ -755,7 +755,7 @@ body {background: #120a01;font-family: 'Josefin Sans', sans-serif;}
 	}
 	#btnopen:hover{
 	background-color: #2696f3;	
-	color: black;
+	color: white;
 }
 
 	#portfolio p{
