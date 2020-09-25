@@ -679,6 +679,43 @@ body {background: #120a01;font-family: 'Josefin Sans', sans-serif;}
 .fw-part2 .animate__{
 	opacity: 1;
 }
+
+/*******Creative*******/
+.Creative{
+	padding: 10px;
+	font-family: 'Josefin Sans', sans-serif;
+	margin: 10px;
+	text-align: center;
+	font-size: 25px;
+}
+.Crimg{
+	padding: 20px;
+	width: device-width;
+	height: device-height;
+}
+.crf{
+	width: 70px;
+	height: 70px;
+	margin: 10px;
+	
+}
+
+.fw-part1{
+	opacity: 0;
+}
+.fw-part2{
+	opacity: 0;
+}
+.fw-part1 .animate__{
+	opacity: 1;
+}
+.fw-part2 .animate__{
+	opacity: 1;
+}
+
+
+
+
 /*******Portfolio******/
 
 #portfolio{
